@@ -1,0 +1,16 @@
+{
+  "name": "billing-software",
+  "version": "1.0.0",
+  "description": "Billing software for restaurants",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "billing",
+    "restaurant",
+    "software"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

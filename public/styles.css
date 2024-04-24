@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#menu {
+    margin-bottom: 20px;
+}
+
+#menu h2 {
+    margin-top: 0;
+}
+
+#menu .menu-item {
+    margin-bottom: 10px;
+}
+
+#cart {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#cart h2 {
+    margin-top: 0;
+}
+
+#checkout {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #menu .menu-item {
+        margin-bottom: 5px;
+        text-align:center;
+        background-color:gray;
+    }
+
+    #checkout {
+        font-size: 14px;
+    }
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 40%;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+/* Sticky cart button */
+#cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+.container{
+font-family: Comic Sans MS;
+}
+.menucard{
+background-color
+}
+.crd {
+    background-color: #FFF45F;
+    /* Set card color to red */
+    border-radius: 8px;
+    box-shadow:
+        0 0 0 10px red,
+        /* Yellow shadow */
+        0 30px 25px rgba(0, 0, 0, 0.5);
+    /* Red shadow */
+    padding: 20px;
+    margin-bottom: 50px;
+    font-family: Comic Sans MS;
+}
