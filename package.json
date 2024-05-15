@@ -4,8 +4,7 @@
   "description": "Billing software for restaurants",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "netlify deploy --prod"
+    "start": "node server.js"
   },
   "keywords": [
     "billing",
@@ -15,11 +14,15 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.19.2",
     "googleapis": "^137.1.0",
-    "netlify": "^13.1.16"
+    "netlify": "^13.1.16",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0",
+    "netlify-cli":"^17.23.5"
   },
   "devDependencies": {
-    "netlify-cli": "^17.23.2",
+    "netlify-cli": "^17.23.5",
     "webpack": "^5.91.0"
   }
 }
