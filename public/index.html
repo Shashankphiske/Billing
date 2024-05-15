@@ -3,59 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing Software</title>
+    <title>Billify - Simplify Your Billing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center text-white">Billing Software</h1>
-            </div>
-        </div>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Welcome to Billify</h1>
+        <p>Simplify Your Billing Process with Billify</p>
+        <p>Get Started Today!</p>
+        <a href="./login.html" class="btn btn-primary">Login</a>
     </div>
-</header>
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 crd">
-                <section id="menu">
-                    <h2>Hatke!!! Menu</h2>
-                    <!-- Menu items will be dynamically added here -->
-                </section>
-            </div>
-            <div class="col-md-4 crd">
-                <section id="cart">
-                    <h2>Cart</h2>
-                    <!-- Cart items will be dynamically added here -->
-                    <div id="total"></div>
-                    <button id="checkout" class="btn btn-success btn-block">Checkout</button>
-                    <!-- Print Cart button -->
-                    <button id="printCart" class="btn btn-primary btn-block">Print Cart</button>
-                </section>
-            </div>
-        </div>
-    </div>
-</main>
-
-<!-- Cart button -->
-<button id="cart-button" class="btn btn-primary btn-lg rounded-circle"><i class="fas fa-shopping-cart"></i> cart</button>
-
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="script.js"></script>
-
-<script>
-    // Function to handle printing the cart section
-    document.getElementById('printCart').addEventListener('click', function() {
-        var printContents = document.getElementById('cart').innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    });
-</script>
+</div>
 </body>
 </html>

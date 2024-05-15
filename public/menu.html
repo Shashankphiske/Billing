@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center text-white">Hatke Vada</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 crd">
+                <h2>Hatke!!! Menu</h2>
+                <section id="menu" class="menucard">
+
+                    <!-- Menu items will be dynamically added here -->
+                </section>
+            </div>
+            <div class="col-md-4 ">
+                <section id="cart">
+                    <h2>Cart</h2>
+
+                    <!-- Cart items will be dynamically added here -->
+                    <div id="total"></div>
+                    <button id="checkout" class="btn btn-success btn-block">Checkout</button>
+                    <!-- Print Cart button -->
+
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Cart button -->
+<button id="cart-button" class="btn btn-primary btn-lg rounded-circle"><i class="fas fa-shopping-cart"></i> cart</button>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

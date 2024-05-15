@@ -231,6 +231,11 @@ async function placeOrder(totalAmount, paymentMode) {
     console.log(data);
     if (response.ok) {
       alert('Order placed successfully!');
+      var printContents = document.getElementById('cart').innerHTML;
+      var originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
       cart.length = 0;
       updateCartDisplay();
       // Reset display to show menu section and hide cart section
@@ -261,6 +266,8 @@ window.onload = function() {
     } else {
       cartSection.style.display = 'block';
     }
+
+
 
     // Hide menu section when cart is displayed
     menuSection.style.display = 'none';
