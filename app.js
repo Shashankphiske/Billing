@@ -49,7 +49,6 @@ app.post('/login', (req, res) => {
   } else {
     // If authentication fails, clear the session and redirect back to the login page with an error message
     console.log('Authentication failed. Clearing session.');
-    error('Authentication failed');
     req.session.destroy((err) => {
       if (err) {
         console.error('Error destroying session:', err);
@@ -84,5 +83,5 @@ app.use(googleSheetsRoutes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log('server is running');
+  console.log(Server is running on port ${PORT});
 });

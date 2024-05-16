@@ -15,11 +15,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "googleapis": "^137.1.0",
     "netlify": "^13.1.16",
+    "netlify-cli": "^17.23.5",
     "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0",
-    "netlify-cli":"^17.23.5"
+    "node-fetch": "^3.3.2",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "netlify-cli": "^17.23.5",

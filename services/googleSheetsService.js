@@ -11,7 +11,7 @@ const auth = new google.auth.JWT(
 const sheets = google.sheets({ version: 'v4', auth });
 
 async function writeToSheet(orderItems, totalAmount, paymentMode) {
-  const spreadsheetId = '18jY-DuelEAdMcWOW0-wVJafsia5vXQv8v_7rM3lBfwM'; // Your spreadsheet ID
+  const spreadsheetId = '1YmRycO7YsHWOpWnJ8jOr29epCsZeunbVv1AnlEQQkC4'; // Your spreadsheet ID
   const range = 'Sheet1!A1:E1'; // Example range to write data to
 
   const now = new Date();

@@ -9,7 +9,7 @@ googleSheetsController.writeToSheet = async (req, res) => {
     const range = 'A1'; // Define the range to write data to
     const resource = { values: data };
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: 'YOUR_SPREADSHEET_ID',
+      spreadsheetId: '1YmRycO7YsHWOpWnJ8jOr29epCsZeunbVv1AnlEQQkC4',
       range,
       valueInputOption: 'RAW',
       resource,

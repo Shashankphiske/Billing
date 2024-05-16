@@ -1,3 +1,5 @@
+
+
 const menuItems = [
   {
     category: 'Vadapav',
@@ -241,6 +243,7 @@ async function placeOrder(totalAmount, paymentMode) {
       // Reset display to show menu section and hide cart section
       document.getElementById('cart').style.display = 'none';
       document.getElementById('menu').style.display = 'block';
+      location.reload();
     } else {
       alert('Failed to place order. Please try again.');
     }
