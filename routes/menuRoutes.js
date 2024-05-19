@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { writeToSheet } = require('../services/googleSheetsService');
 
-router.use(express.json());
 router.post('/placeOrder', async (req, res) => {
   try {
     const { orderItems, totalAmount, paymentMode } = req.body;
