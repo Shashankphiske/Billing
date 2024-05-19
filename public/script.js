@@ -229,8 +229,6 @@ async function placeOrder(totalAmount, paymentMode) {
       body: JSON.stringify({ orderItems, totalAmount, paymentMode }),
       
     });
-    const responseText = await response.text();
-    console.log(responseText);
 
     const data = await response.json();
     console.log(data);
