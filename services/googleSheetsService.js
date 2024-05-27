@@ -22,13 +22,15 @@ async function writeToSheet(orderItems, totalAmount, paymentMode) {
 
   try {
     const response = await sheets.spreadsheets.values.append({
+      auth,
       spreadsheetId,
       range,
-      valueInputOption: 'RAW',
-      requestBody: {
-        values: data,
+      valueInputOption:"USER_ENTERED",
+      resource:{
+          values:data,
+  
       },
-    });
+  });
 
     console.log(response.data);
     return response.data;

@@ -8,7 +8,6 @@ router.post('/placeOrder', async (req, res) => {
     await writeToSheet(orderItems, totalAmount, paymentMode); // Write data to Google Sheet
     res.status(200).json({ success: true, message: 'Order placed successfully' });
   } catch (error) {
-    console.error('Error placing order:', error);
     res.status(500).json({ success: false, error: 'Failed to place order' });
   }
 });

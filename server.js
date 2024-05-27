@@ -78,9 +78,9 @@ app.get('/', (req, res) => {
 });
 
 // Use routes
-app.use(menuRoutes);
-app.use(cartRoutes);
-app.use(googleSheetsRoutes);
+app.use('/',menuRoutes);
+app.use('/',cartRoutes);
+app.use('/',googleSheetsRoutes);
 
 // Start server
 app.listen(PORT, () => {

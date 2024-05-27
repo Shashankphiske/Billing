@@ -1,5 +1,3 @@
-
-
 const menuItems = [
   {
     category: 'Vadapav',
@@ -163,7 +161,7 @@ function updateCartDisplay() {
     const selectedPaymentMode = document.querySelector('input[name="paymentMode"]:checked');
     if (!selectedPaymentMode) {
       alert('Please select a payment mode');
-      return;
+      return; 
     }
     const paymentMode = selectedPaymentMode.value;
     const totalAmount = calculateTotalAmount();
@@ -229,7 +227,7 @@ async function placeOrder(totalAmount, paymentMode) {
       body: JSON.stringify({ orderItems, totalAmount, paymentMode }),
       
     });
-
+    console.log(response);
     const data = await response.json();
     console.log(data);
     if (response.ok) {
@@ -254,7 +252,6 @@ async function placeOrder(totalAmount, paymentMode) {
   }
 }
 
-
 window.onload = function() {
   displayMenu();
   updateCartDisplay();
@@ -277,4 +274,3 @@ window.onload = function() {
     menuSection.style.display = 'none';
   });
 };
-
