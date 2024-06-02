@@ -220,30 +220,30 @@ window.onscroll = function() {
 async function placeOrder(totalAmount, paymentMode) {
   const orderItems = cart.map(item => item.name).join(', ');
   try {
-    const response = await fetch('/placeOrder', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ orderItems, totalAmount, paymentMode }),
-    });
-    console.log(response);
-    const data = await response.json();
-    console.log(data);
-    if (response.ok) {
-      alert('Order placed successfully!');
-      cart.length = 0;
-      updateCartDisplay();
-      // Reset display to show menu section and hide cart section
-      document.getElementById('cart').style.display = 'none';
-      document.getElementById('menu').style.display = 'block';
-      location.reload();
-    } else {
-      alert('Failed to place order. Please try again.');
-    }
+      const response = await fetch('/placeOrder', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ orderItems, totalAmount, paymentMode }),
+      });
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+      if (response.ok) {
+          alert('Order placed successfully!');
+          cart.length = 0;
+          updateCartDisplay();
+          // Reset display to show menu section and hide cart section
+          document.getElementById('cart').style.display = 'none';
+          document.getElementById('menu').style.display = 'block';
+          location.reload();
+      } else {
+          alert('Failed to place order. Please try again.');
+      }
   } catch (error) {
-    console.error('Error placing order:', error);
-    alert('Error placing order. Please try again.');
+      console.error('Error placing order:', error);
+      alert('Error placing order. Please try again.');
   }
 }
 
@@ -256,16 +256,14 @@ window.onload = function() {
   const menuSection = document.getElementById('menu');
 
   cartButton.addEventListener('click', function() {
-    // Toggle visibility of cart section
-    if (cartSection.style.display === 'block') {
-      cartSection.style.display = 'none';
-    } else {
-      cartSection.style.display = 'block';
-    }
+      // Toggle visibility of cart section
+      if (cartSection.style.display === 'block') {
+          cartSection.style.display = 'none';
+      } else {
+          cartSection.style.display = 'block';
+      }
 
-
-
-    // Hide menu section when cart is displayed
-    menuSection.style.display = 'none';
+      // Hide menu section when cart is displayed
+      menuSection.style.display = 'none';
   });
 };

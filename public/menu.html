@@ -58,23 +58,16 @@
         var printContents = document.getElementById('cart').innerHTML;
         var originalContents = document.body.innerHTML;
         
-        // Create a new temporary container div
-        var tempDiv = document.createElement('div');
-        tempDiv.innerHTML = printContents;
-    
-        // Hide the original contents
-        document.body.innerHTML = "";
-        document.body.appendChild(tempDiv);
-    
-        // Print the temporary contents
-        window.print();
-    
-        // Restore the original contents
-        document.body.innerHTML = originalContents;
-    }
-    
-    // Call the function when you need to print the cart contents
-);
+        // Create a new window for printing
+        var printWindow = window.open('', '', 'height=600,width=800');
+        printWindow.document.write('<html><head><title>Print Cart</title>');
+        printWindow.document.write('<link rel="stylesheet" href="styles.css">');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write(printContents);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    });
 </script>
 </body>
 
