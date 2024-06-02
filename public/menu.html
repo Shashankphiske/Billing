@@ -40,7 +40,7 @@
                     <!-- Print Cart button -->
 
                 </section>
-                
+                <button id="printCart" class="btn btn-primary btn-block">Print Cart</button>
             </div>
         </div>
     </div>
@@ -52,6 +52,30 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="script.js"></script>
 
+<script>
+    // Function to handle printing the cart section
+    document.getElementById('printCart').addEventListener('click', function() {
+        var printContents = document.getElementById('cart').innerHTML;
+        var originalContents = document.body.innerHTML;
+        
+        // Create a new temporary container div
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = printContents;
+    
+        // Hide the original contents
+        document.body.innerHTML = "";
+        document.body.appendChild(tempDiv);
+    
+        // Print the temporary contents
+        window.print();
+    
+        // Restore the original contents
+        document.body.innerHTML = originalContents;
+    }
+    
+    // Call the function when you need to print the cart contents
+);
+</script>
 </body>
 
 </html>

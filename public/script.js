@@ -10,7 +10,8 @@ const menuItems = [
       { id: 6, name: 'Hatke Janjhanit Vadapav', price: 24 },
       { id: 7, name: 'Hatke Cheese & Onion Vadapav', price: 24 },
       { id: 8, name: 'Hatke VIP Vadapav', price: 24 },
-      { id: 9, name: 'Sabudana Vada (2 Piece)', price: 30 }
+      { id: 9, name: 'Sabudana Vada (2 Piece)', price: 30 },
+      {id : 10, name : 'Misal', price:50 }
     ]
   },
   {
@@ -225,18 +226,12 @@ async function placeOrder(totalAmount, paymentMode) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ orderItems, totalAmount, paymentMode }),
-      
     });
     console.log(response);
     const data = await response.json();
     console.log(data);
     if (response.ok) {
       alert('Order placed successfully!');
-      var printContents = document.getElementById('cart').innerHTML;
-      var originalContents = document.body.innerHTML;
-      document.body.innerHTML = printContents;
-      window.print();
-      document.body.innerHTML = originalContents;
       cart.length = 0;
       updateCartDisplay();
       // Reset display to show menu section and hide cart section
